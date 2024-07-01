@@ -1,4 +1,5 @@
 # Medical-Chatbot
+(The code is in the branch 'master')
 An AI-powered system designed to enhance mental health support by providing real-time emotional analysis and personalized interventions through user interaction.
 
 ## Synopsis
