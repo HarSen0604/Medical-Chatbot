@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Form</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Report</h1>
+    </header>
+    <main>
+        <section class="personal-information">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <p>{{ full_name }}</p>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <p>{{ age }}</p>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <p>{{ gender }}</p>
+            </div>
+            <div class="form-group">
+                <label for="symptoms">Diagnosed Symptoms and the disease:</label>
+                <p>{{ symptoms }}</p>
+            </div>
+        </section>
+        <section class="term-condition">
+            <h2>Term & Condition</h2>
+            <p>This report is machine-generated and may give misleading information. It is advisable to consult a professional psychologist for better diagnosis.</p>
+        </section>
+        <form action="/convert_to_pdf" method="post">
+            <input type="hidden" name="full_name" value="{{ full_name }}">
+            <input type="hidden" name="age" value="{{ age }}">
+            <input type="hidden" name="gender" value="{{ gender }}">
+            <input type="hidden" name="symptoms" value="{{ symptoms }}">
+            <button type="submit">Convert to PDF</button>
+        </form>
+    </main>
+</body>
+</html>
