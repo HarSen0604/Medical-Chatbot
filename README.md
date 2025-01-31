@@ -31,44 +31,72 @@ The global mental health landscape faces significant challenges, with rising men
 - Fast and stable internet connectivity.
 - Compatibility with required libraries and frameworks.
 
-### Hardware Requirements
+---
 
-#### Windows Deployment
+## Hardware Requirements
 
-- **Minimum**: Windows 10, Intel Core i5, 8GB RAM, 256GB SSD, Python 3.7+
-- **Recommended**: Windows 10, Intel Core i7, 16GB RAM, 512GB SSD, Python 3.7+, GPU with 4GB VRAM
+#### WSL (Windows Subsystem for Linux) Deployment
+
+- **Minimum**: Ubuntu 20.04 (or later), Intel Core i5, 8GB RAM, 256GB SSD, Python 3.7+
+- **Recommended**: Ubuntu 20.04 (or later), Intel Core i5, 8GB RAM, 512GB SSD, Python 3.7+
 
 #### macOS Deployment
 
 - **Minimum**: macOS Mojave, Intel Core i5, 8GB RAM, 256GB SSD, Python 3.7+
 - **Recommended**: macOS Catalina, Intel Core i7 or Apple M-Series, 16GB RAM, 512GB SSD, Python 3.7+
 
-### Software Requirements
+## Software Requirements
 
 - Compatible with libraries like PyPDF2, OpenAI's Python library, FAISS.
 - Use IDEs like Visual Studio Code, PyCharm, or Jupyter Notebooks.
 
-### Security Considerations
+> **Note:**  
+> While the program can technically run on Windows, setting it up can be a tedious process due to various dependencies and configuration issues. We highly recommend using a Linux-based OS (such as WSL) or macOS for a smoother and more reliable experience. WSL (Windows Subsystem for Linux) is a great alternative if you're on Windows, offering a Linux-like environment without the need for a full dual-boot setup.
 
-- Implement robust security measures for handling sensitive data, including secure storage for API keys and access tokens.
+---
 
 ## How to Run
 
-1. Clone the repo:
-   ```sh
-   git clone https://github.com/HarSen0604/Medical-Chatbot.git
-   ```
-2. Navigate to the directory:
-   ```sh
-   cd Medical-Chatbot
-   ```
-3. Install the required packages:
-   ```sh
-   pip install -r requirements.txt
-   ```
-4. Add your OpenAI key to `app.py`.
-5. Run the application:
-   ```sh
-   python app.py
-   ```
-6. Click on the link shown in the terminal.
+### 1. Clone the repo:
+```sh
+git clone https://github.com/HarSen0604/Medical-Chatbot.git
+```
+
+### 2. Navigate to the directory:
+```sh
+cd Medical-Chatbot
+```
+
+### 3. Set up a virtual environment (optional, but recommended):
+   - **For WSL or Linux-based systems (Ubuntu, etc.):**
+     ```sh
+     python -m venv venv
+     source venv/bin/activate
+     ```
+   - **For macOS:**
+     ```sh
+     python -m venv venv
+     source venv/bin/activate
+     ```
+   - **For Windows (if using Windows natively):**
+     ```sh
+     python -m venv venv
+     .\venv\Scripts\activate
+     ```
+
+   > **Note:** Activating the virtual environment ensures that you have a clean environment to install dependencies without interfering with your system-wide Python installation.
+
+### 4. Install the required packages:
+```sh
+pip install -r requirements.txt
+```
+
+### 5. Add your OpenAI API key to `openai_key.pem`:
+
+### 6. Run the application:
+```sh
+python app.py
+```
+
+### 7. Open the link shown in the terminal:
+   - After running the app, you'll see a URL in the terminal. Click on or copy-paste it into your browser to access the chatbot.
